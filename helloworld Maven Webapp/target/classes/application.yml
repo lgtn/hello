@@ -1,0 +1,23 @@
+people:
+  name: liutianlong
+  age: 28
+testName: liutianlong
+
+server:
+  port: 8080
+  context-path: /hello
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: test
+    password: 1
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      viewClass: org.springframework.web.servlet.view.JstlView
+      
+#spring.mvc.view.prefix: /WEB-INF/views/
+#spring.mvc.view.suffix: .jsp

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: helloworld Maven Webapp
+Implementation-Version: 1.0
+Implementation-Vendor-Id: com.tl
+Build-Jdk: 1.7.0_45
+Built-By: TL
+Created-By: Maven Integration for Eclipse
+
