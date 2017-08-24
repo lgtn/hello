@@ -6,12 +6,13 @@
 	
     <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>${LOG_PATH}/info.log</File>
+        <append>true</append> 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${LOG_PATH}/info-%d{yyyyMMdd}.log.%i</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+            <!-- <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>500MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
-            <maxHistory>2</maxHistory>
+            <maxHistory>2</maxHistory> -->
         </rollingPolicy>
         <layout class="ch.qos.logback.classic.PatternLayout">
             <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
@@ -47,6 +48,12 @@
     <logger name="org.hibernate.SQL" level="INFO" />
     <logger name="org.hibernate.engine.QueryParameters" level="INFO" />
     <logger name="org.hibernate.engine.query.HQLQueryPlan" level="INFO" /> -->
+    
+    <logger name="org.springframework.jdbc.core.JdbcTemplate" level="DEBUG" />
+    <logger name="org.springframework.jdbc.core.StatementCreatorUtils" level="TRACE" />
+    <logger name="org.springframework.transaction" level="DEBUG" />
+    <logger name="org.springframework.jdbc.datasource" level="DEBUG" />
+    <logger name="org.springframework.transaction.interceptor.TransactionInterceptor" level="TRACE" />
 
     <root level="INFO">
         <appender-ref ref="INFO_FILE" />

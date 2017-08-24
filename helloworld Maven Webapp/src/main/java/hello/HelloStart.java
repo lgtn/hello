@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Bean;
 // 注解等价于以默认属性使用 @Configuration ， @EnableAutoConfiguration 和 @ComponentScan
 public class HelloStart {
 
-	@Bean
-	public DataSource dataSource(DataSourceProperties properties) {
-		BasicDataSource dataSource = new BasicDataSource();
-		return dataSource;
-	}
+//	@Bean
+//	public DataSource dataSource(DataSourceProperties properties) {
+//		BasicDataSource dataSource = new BasicDataSource();
+//		return dataSource;
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication application = new SpringApplication(HelloStart.class);
